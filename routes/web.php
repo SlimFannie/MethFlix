@@ -18,5 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('films',
-[FilmsController::class, 'index'])-­>name('films.index');
+Route::get('films', 
+    [FilmsController::class, 'index'])->name('films.index');

@@ -17,7 +17,27 @@ class GenresTableSeeder extends Seeder
         DB::table('genres')->insert([
             [
                 'id'=>1,
-                'genre'=>'comédie'
+                'genre'=>'Comédie'
+            ],
+            [
+                'id'=>2,
+                'genre'=>'Thriller'
+            ],
+            [
+                'id'=>3,
+                'genre'=>'Science-fiction'
+            ],
+            [
+                'id'=>4,
+                'genre'=>'Historique'
+            ],
+            [
+                'id'=>5,
+                'genre'=>'Documentaire'
+            ],
+            [
+                'id'=>6,
+                'genre'=>'Western'
             ],
         ]);
     }

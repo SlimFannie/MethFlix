@@ -19,7 +19,6 @@ return new class extends Migration
             $table->text('resume');
             $table->year('annee');
             $table->string('pays');
-            $table->foreignId('genre_id')->constrained();
             $table->string('img')->nullable();
             $table->timestamps();
         });

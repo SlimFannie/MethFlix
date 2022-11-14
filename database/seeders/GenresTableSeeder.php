@@ -29,7 +29,7 @@ class GenresTableSeeder extends Seeder
             ],
             [
                 'id'=>4,
-                'genre'=>'Historique'
+                'genre'=>'Crime'
             ],
             [
                 'id'=>5,
@@ -38,6 +38,26 @@ class GenresTableSeeder extends Seeder
             [
                 'id'=>6,
                 'genre'=>'Western'
+            ],
+            [
+                'id'=>7,
+                'genre'=>'Action'
+            ],
+            [
+                'id'=>8,
+                'genre'=>'Romantique'
+            ],
+            [
+                'id'=>9,
+                'genre'=>'Animation'
+            ],
+            [
+                'id'=>10,
+                'genre'=>'Drame'
+            ],
+            [
+                'id'=>11,
+                'genre'=>'Mystère'
             ],
         ]);
     }

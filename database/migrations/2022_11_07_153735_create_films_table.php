@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('resume');
             $table->year('annee');
             $table->string('pays');
+            $table->integer('minutes');
             $table->string('img')->nullable();
             $table->timestamps();
         });

@@ -3,10 +3,15 @@
 ### Fait:
 - Installation Laravel
 - Laravel - Les gabarits
+- La base de donnée
+- Le modèle
 
 ### À faire:
 
-- La base de donnée
-- Le modèle
 - Les requêtes eloquentes
 - Le formulaire d'ajout
+- La modification
+- Usagers version courte
+- La suppression
+- Les images
+- Validation cliente

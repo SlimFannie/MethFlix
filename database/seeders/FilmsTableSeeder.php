@@ -36,7 +36,7 @@ class FilmsTableSeeder extends Seeder
             ],
             //3
             [
-                'titre'=>'Shin Seiki Evangelion gekijōban: Ea/Magokoro o, kimi ni',
+                'titre'=>'The End of Evangelion',
                 'resume'=>'Après la défaite du dernier Angel, Shinji Ikari tombe dans une dépression profonde. Quand la SEELE ordonne que au JSSDF de faire une attaque surprise sur le quartier général de la NERV, Gendo Ikari prend la fuite avec Rei Ayanami, où il tente de de mener à bien le Plan de Complémentarité de l\Homme. Shinji, aux limites de sa santé mentale, doit décider du sort de l\humanité.',
                 'annee'=>1997,
                 'pays'=>'Japon',
@@ -79,7 +79,7 @@ class FilmsTableSeeder extends Seeder
                 'annee'=>1999,
                 'pays'=>'États-Unis',
                 'minutes'=>139,
-                'img'=>'https://m.media-amazon.com/images/M/MV5BYmNjYWIyYmYtNDc5Yy00ZDM0LWJkMzktZDQ1MTkzNmQ0MTU3XkEyXkFqcGdeQXVyMjMxOTgyNTU@._V1_.jpg'
+                'img'=>'https://th.bing.com/th/id/OIP.ly6cvJLwsDF11P4ZmW196AHaK_?pid=ImgDet&rs=1'
             ],
             //8
             [
@@ -97,7 +97,7 @@ class FilmsTableSeeder extends Seeder
                 'annee'=>2015,
                 'pays'=>'États-Unis',
                 'minutes'=>168,
-                'img'=>'https://m.media-amazon.com/images/M/MV5BNjE5YzBhYTYtNzYxMy00ZGJmLWFhZmQtMDQ1YmRiNmVhYjdmXkEyXkFqcGdeQXVyOTM5Nzc0Mw@@._V1_.jpg'
+                'img'=>'https://m.media-amazon.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2MDEzNzE@._V1_.jpg'
             ],
             //10
             [

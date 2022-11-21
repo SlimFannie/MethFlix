@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\View;
+use App\Models\Film;
 
 class FilmsController extends Controller
 {
@@ -12,10 +13,10 @@ class FilmsController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index() : View
+    public function index()
     {
         $films = Film::orderBy('titre')->get();
-        return View('films.index', compact('films'));
+        return view('films.index', compact('films'));
     }
 
     /**

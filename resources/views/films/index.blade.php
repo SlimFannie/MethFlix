@@ -19,17 +19,17 @@
         </div>
         <div class="row text-center">
             <i class="fa-solid fa-kitchen-set textcharcoal fa-2x pb-1"></i>
-            <span class="pb-3">
+            <div class="form-group pb-3">
                 <label for="filtre" class="textcharcoal d-block pb-1">Filtrez notre sélection de film comme du beurre de Marrakech.</label>
                 <select name="filtre" id="filtre">
                     <option value="tous">Tous les films</option> 
                     @if (count($genres))
                         @foreach($genres as $genre)
-                            <option value="{{ $genre->genre }}">{{ $genre->genre }}</option>
+                            <option value="{{ $genre->genre_id }}" {{ $genre->id == old('genre_id') ? 'selected' : null }}>{{ $genre->genre }}>{{ $genre->genre }}</option>
                         @endforeach
                     @endif
                 </select>
-            </span>
+            </div>
         </div>
         <div class="row">
             @if (count($films))

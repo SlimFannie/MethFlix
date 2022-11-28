@@ -16,10 +16,14 @@ class FilmsController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
         $films = Film::all();
         $genres = Genre::all();
+        $filtreGenre = Film::join('genres', 'genre_id', '=', 'genres_id')
+            ->select('films.*')
+            ->where('genres.id', $request->input('filtre'))
+            ->get();
         return view('films.index', compact(['films', 'genres']));
     }
 

@@ -11,4 +11,8 @@ class Film extends Model
 
     protected $fillable = ['titre', 'resume', 'annee', 'origine_id', 'minutes', 'img'];
 
+    public function genres() : HasMany {
+        return $this->hasMany('App\Genre');
+    }
+
 }

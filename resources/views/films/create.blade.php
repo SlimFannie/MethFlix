@@ -18,22 +18,22 @@
                         @csrf
                         <div class="form-group">
                             <label for="titreFilm" class="textbleu">Titre du film :</label>
-                            <input type="text" class="form-control" id="titreFilm" placeholder="Le meilleur film du monde" name="titre">
+                            <input type="text" class="form-control" id="titreFilm" placeholder="Le meilleur film du monde" name="titre" value="{{ old('titre') }}">
                         </div>
                         <div class="form-group">
                             <label for="resumeFilm" class="textbleu">Résumé du film :</label>
-                            <textarea class="form-control" id="resumeFilm" placeholder="C'est l'histoire d'un gars" name="resume"></textarea>
+                            <textarea class="form-control" id="resumeFilm" placeholder="C'est l'histoire d'un gars" name="resume" value="{{ old('resume') }}"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="anneeFilm" class="textbleu">Année de parution initiale :</label>
-                            <input type="number" min="1895" max="2023" step="1" class="form-control" id="anneeFilm" name="annee">
+                            <input type="number" min="1895" max="2023" step="1" class="form-control" id="anneeFilm" name="annee" value="{{ old('annee') }}">
                         </div>
                         <div class="form-group">
                             <label for="paysFilm" class="textbleu">Pays de production :</label>
                                 <select id="paysFilm" name="paysFilm" class="form-control">
                                 @if (count($origines))
                                     @foreach($origines as $origine)
-                                        <option value="{{ $origine->id }}">{{ $origine->pays }}</option>
+                                        <option value="{{ $origine->id }}" {{ $origine->id == old('origine_id') ? 'selected' : null }}>{{ $origine->pays }}</option>
                                     @endforeach
                                 @endif
                                 </select>

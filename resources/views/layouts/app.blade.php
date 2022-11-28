@@ -10,7 +10,13 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
 </head>
 <body>
-    <!-- Mettre navbar/header avant le yield -->
+    @if(isset($errors) && $errors->any())
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <p>{{ $error }}</p>
+            @endforeach
+        </div>
+    @endif
     <div class="container-fluid bg vh-100">
         <div class="row bgnav">
             <div class="col-12 text-center">

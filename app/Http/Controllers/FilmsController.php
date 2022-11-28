@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\View;
+use Illuminate\Support\Facades\Log;
 use App\Models\Film;
+use App\Models\Genre;
+use App\Models\Origine;
 
 class FilmsController extends Controller
 {
@@ -16,7 +19,8 @@ class FilmsController extends Controller
     public function index()
     {
         $films = Film::all();
-        return view('films.index', compact('films'));
+        $genres = Genre::all();
+        return view('films.index', compact(['films', 'genres']));
     }
 
     /**
@@ -27,6 +31,8 @@ class FilmsController extends Controller
     public function create()
     {
         //
+        $origines = Origine::all();
+        return view('films.create', compact(['origines']));
     }
 
     /**
@@ -37,7 +43,13 @@ class FilmsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $film = new Film($request->all());
+            $film->save();
+        } catch (\Throwable $e) {
+            Log::debug($e);
+        }
+        return redirect()->route('films.index');
     }
 
     /**

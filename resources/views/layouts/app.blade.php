@@ -11,12 +11,14 @@
 </head>
 <body>
     <!-- Mettre navbar/header avant le yield -->
-    <div class="container-fluid bg">
-        <div class="row bgnav p-2 mb-3">
+    <div class="container-fluid bg vh-100">
+        <div class="row bgnav">
             <div class="col-12 text-center">
                 <h1>Methflix <i class="fa-solid fa-pills"></i></h1>
-                <h4>Plane sur ta soirée</h5>
+                <h5>Plane sur ta soirée</h5>
             </div>
+        </div>
+        <div class="row bgnav mb-3 sticky-top">
             <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,9 +42,6 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
                     <form class="d-flex">

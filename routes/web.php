@@ -18,5 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Films
 Route::get('films', 
     [FilmsController::class, 'index'])->name('films.index');
+
+Route::get('/films/nouveau',
+    [FilmsController::class, 'create'])->name('films.create');
+    
+    Route::POST('/films', 
+    [FilmsController::class, 'store'])->name('films.store');

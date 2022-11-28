@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
 
         //Données de test
         $this->call(GenresTableSeeder::class);
+        $this->call(OriginesTableSeeder::class);
         $this->call(FilmsTableSeeder::class);
         $this->call(ActeursTableSeeder::class);
         $this->call(FilmGenreTableSeeder::class);

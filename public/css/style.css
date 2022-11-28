@@ -2,13 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-h1, h2, h3, h4, h5, p, a, button {
+h1, h2, h3, h4, h5, p, a, button, label {
     font-family: 'Oswald', sans-serif;
-    color: #FFFBC1;
+    color: #F6E3C5;
 }
 
 h1 {
     font-size: 6rem;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 4rem;
 }
 
 h4 {
@@ -20,7 +28,12 @@ h5 {
 }
 
 .textcharcoal {
-    color: #333333;
+    color: #070d0d;
+    font-weight: bold;
+}
+
+.textbleu {
+    color: #4CACBC;
 }
 
 /* Modifications de classes boostrap */
@@ -36,27 +49,36 @@ h5 {
 /* Backgrounds */
 
 .bg {
-    background-color: #B6E2A1;
+    background-color: #F6E3C5;
 }
 
 .bgnav {
-    background-color: #FEBE8C;
+    background-color: #6CC4A1;
 }
 
 .bgcard {
-    background-color: #F7A4A4;
+    background-color: #4CACBC;
 }
 
 /* Boutons */
 
 .btn-jaune {
-    background-color: #FFFBC1;
-    color: #F7A4A4;
+    background-color: #161853;
+    color: #6CC4A1;
     font-size: 1.2rem;
 }
 
 .btn-vert {
-    background-color: #FEBE8C;
-    color: #FFFBC1;
+    background-color: #6CC4A1;
+    color: #161853;
     font-size: 1.2rem;
 }
+
+/* Hauteurs */
+
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }

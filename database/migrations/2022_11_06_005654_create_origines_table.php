@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('films', function (Blueprint $table) {
+        Schema::create('origines', function (Blueprint $table) {
             $table->id();
-            $table->string('titre');
-            $table->text('resume');
-            $table->year('annee');
-            $table->foreignId('origine_id');
-            $table->integer('minutes');
-            $table->string('img')->nullable();
+            $table->string('pays');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('films');
+        Schema::dropIfExists('origines');
     }
 };

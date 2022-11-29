@@ -9,7 +9,7 @@ use App\Models\Film;
 use App\Models\Genre;
 use App\Models\Origine;
 
-class FilmsController extends Controller
+class ActeursController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,11 +18,7 @@ class FilmsController extends Controller
      */
     public function index()
     {
-
-        $films = Film::all();
-        $genres = Genre::all();
-
-        return view('films.index', compact(['films', 'genres']));
+        return view('acteurs.index', compact(['acteurs']));
     }
 
     /**
@@ -33,8 +29,6 @@ class FilmsController extends Controller
     public function create()
     {
         //
-        $origines = Origine::all();
-        return view('films.create', compact(['origines']));
     }
 
     /**
@@ -45,13 +39,7 @@ class FilmsController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $film = new Film($request->all());
-            $film->save();
-        } catch (\Throwable $e) {
-            Log::debug($e);
-        }
-        return redirect()->route('films.index');
+        //
     }
 
     /**

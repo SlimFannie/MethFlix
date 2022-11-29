@@ -27,3 +27,7 @@ Route::get('/films/nouveau',
     
     Route::POST('/films', 
     [FilmsController::class, 'store'])->name('films.store');
+
+//Acteurs
+Route::get('acteurs', 
+    [ActeursController::class, 'index'])->name('acteurs.index');

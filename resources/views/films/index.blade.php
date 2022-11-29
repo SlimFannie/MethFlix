@@ -1,23 +1,14 @@
 @extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Methflix</title>
-</head>
-<body>
     @section('contenu')
-    <div class="container-fluid bg g-0">
-        <div class="row text-center g-0">
+    <div class="container-fluid bg">
+        <div class="row text-center">
             <h3 class="textcharcoal">Enfin l'heure de chiller tranquille!</h3>
             <img src="https://static-prod.adweek.com/wp-content/uploads/2017/08/lays-disjointed-PAGE-2017.jpg" class="img-fluid w-50 mx-auto">
             <h4 class="textcharcoal">On regarde tu un film?</h4>
             <a class="btn btn-default" href="{{ route('films.create') }}">Ajouter</a>
         </div>
-        <div class="row text-center g-0">
+        <div class="row text-center">
             <i class="fa-solid fa-kitchen-set textcharcoal fa-2x pb-1"></i>
             <div class="form-group pb-3">
                 <label for="filtre" class="textcharcoal d-block pb-1">Filtrez notre sélection de film comme du beurre de Marrakech.</label>
@@ -25,13 +16,13 @@
                     <option value="tous">Tous les films</option> 
                     @if (count($genres))
                         @foreach($genres as $genre)
-                            <option value="{{ $genre->genre_id }}" {{ $genre->id == old('genre_id') ? 'selected' : null }}>{{ $genre->genre }}</option>
+                            <option value="{{ $genre->genre_id }}">{{ $genre->genre }}</option>
                         @endforeach
                     @endif
                 </select>
             </div>
         </div>
-        <div class="row g-0">
+        <div class="row">
             @if (count($films))
                 @foreach($films as $film)
                 <div class="col-3 pb-3">
@@ -55,6 +46,4 @@
             @endif
         </div>
     </div>
-</body>
-</html>
 @stop

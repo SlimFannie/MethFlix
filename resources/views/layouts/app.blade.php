@@ -17,7 +17,7 @@
             @endforeach
         </div>
     @endif
-    <div class="container-fluid bg vh-100">
+    <div class="container-fluid bg vh-100 g-0">
         <div class="row bgnav">
             <div class="col-12 text-center">
                 <h1>Methflix <i class="fa-solid fa-pills"></i></h1>

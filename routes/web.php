@@ -22,14 +22,20 @@ Route::get('/', function () {
 Route::get('/films', 
     [FilmsController::class, 'index'])->name('films.index');
 
-    Route::get('/films/{genre}', 
-    [FilmsController::class, 'filter'])->name('films.filter');
-
 Route::get('/films/nouveau',
     [FilmsController::class, 'create'])->name('films.create');
     
     Route::POST('/films', 
     [FilmsController::class, 'store'])->name('films.store');
+
+Route::get('/films/{id}/modifier/',
+    [FilmsController::class, 'edit'])->name('films.edit');
+
+    Route::patch('/films/{id}/modifier',
+    [FilmsController::class, 'update'])->name('films.update');
+
+Route::get('/films/{film}/',
+    [FilmsController::class, 'show'])->name('films.show');
 
 //Acteurs
 Route::get('acteurs', 

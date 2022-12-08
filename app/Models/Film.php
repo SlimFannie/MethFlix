@@ -12,7 +12,7 @@ class Film extends Model
     protected $fillable = ['titre', 'resume', 'annee', 'origine_id', 'minutes', 'img'];
 
     public function genres() {
-        return $this->belongsToMany('App\Models\Genre');
+        return $this->belongsToMany(Genre::class, 'genre_id', 'id');
     }
 
     public function origine()

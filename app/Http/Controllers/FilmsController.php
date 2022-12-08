@@ -60,22 +60,9 @@ class FilmsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function filter($id)
+    public function show(Film $film)
     {
-        $films = Film::where('genre_id', $id);
-        $genres = Genre::all();
-        return view('films.index', compact(['films', 'genres']));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        return view('films.show', compact('film'));
     }
 
     /**
@@ -86,7 +73,9 @@ class FilmsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $film = Film::findOrFail($id);
+        $origines = Origine::all();
+        return view('films.edit', compact('film', 'origines'));
     }
 
     /**
@@ -96,9 +85,27 @@ class FilmsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(FilmRequest $request, $id)
     {
-        //
+        try {
+            $film = Film::findOrFail($id);
+
+            $film->titre = $request->titre;
+            $film->resume = $request->resume;
+            $film->annee = $request->annee;
+            $film->origine_id = $request->origine_id;
+            $film->minutes = $request->minutes;
+            $film->img = $request->img;
+
+            $film->save();
+            return redirect()->route('films.index')->with('message', 'Modification de ' . $film->titre . " réussi!");
+        }
+        catch(\Throwable $e) {
+            Log::debug($e);
+            return redirect()->route('films.index')->withErrors(['La modification n\'a pas fonctionnée.']);
+        }
+
+        return redirect()->route('films.index');
     }
 
     /**

@@ -19,8 +19,11 @@ Route::get('/', function () {
 });
 
 //Films
-Route::get('films', 
+Route::get('/films', 
     [FilmsController::class, 'index'])->name('films.index');
+
+    Route::get('/films/{genre}', 
+    [FilmsController::class, 'filter'])->name('films.filter');
 
 Route::get('/films/nouveau',
     [FilmsController::class, 'create'])->name('films.create');

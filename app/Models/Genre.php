@@ -9,8 +9,8 @@ class Genre extends Model
 {
     use HasFactory;
 
-    public function films() : HasMany {
-        return $this->hasMany('App\Film');
+    public function films() {
+        return $this->belongsToMany('App\Models\Film');
     }
 
 }

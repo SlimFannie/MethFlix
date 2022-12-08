@@ -60,6 +60,19 @@ class FilmsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function filter($id)
+    {
+        $films = Film::where('genre_id', $id);
+        $genres = Genre::all();
+        return view('films.index', compact(['films', 'genres']));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function show($id)
     {
         //

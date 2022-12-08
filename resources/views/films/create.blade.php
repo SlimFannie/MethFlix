@@ -30,10 +30,10 @@
                         </div>
                         <div class="form-group">
                             <label for="paysFilm" class="textbleu">Pays de production :</label>
-                                <select id="paysFilm" name="paysFilm" class="form-control">
+                                <select id="paysFilm" name="origine_id" class="form-control">
                                 @if (count($origines))
                                     @foreach($origines as $origine)
-                                        <option value="{{ $origine->id }}" {{ $origine->id == old('origine_id') ? 'selected' : null }}>{{ $origine->pays }}</option>
+                                        <option value="{{ $origine->id }}">{{ $origine->pays }}</option>
                                     @endforeach
                                 @endif
                                 </select>

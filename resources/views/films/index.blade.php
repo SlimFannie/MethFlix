@@ -9,18 +9,15 @@
             <a class="btn btn-default" href="{{ route('films.create') }}">Ajouter</a>
         </div>
         <div class="row text-center">
-            <i class="fa-solid fa-kitchen-set textcharcoal fa-2x pb-1"></i>
-            <div class="form-group pb-3">
-                <label for="filtre" class="textcharcoal d-block pb-1">Filtrez notre sélection de film comme du beurre de Marrakech.</label>
-                <select name="filtre" id="filtre" onchange="">
-                    <option value="tous">Tous les films</option> 
+                <select name="id" id="filtre" onchange="goTo(this.value)">
                     @if (count($genres))
+                    <option value="tous">Tous les films</option> 
                         @foreach($genres as $genre)
-                            <option value="{{ $genre->genre_id }}">{{ $genre->genre }}</option>
+                            <option value="{{ $genre->id }}">{{ $genre->genre }}</option>
                         @endforeach
                     @endif
                 </select>
-            </div>
+                <button type="submit" class="btn btn-vert mt-3">Filtrez notre sélection de film comme du beurre de Marrakech.</button>
         </div>
         <div class="row">
             @if (count($films))

@@ -35,6 +35,7 @@ class FilmRequest extends FormRequest
     {
         return [
             'annee.min' => 'Le premier film est paru en 1895.',
+            'annee.max' => 'Le '
         ];
     }
 

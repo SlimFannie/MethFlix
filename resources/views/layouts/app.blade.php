@@ -18,13 +18,13 @@
         </div>
     @endif
     <div class="container-fluid bg vh-100 g-0">
-        <div class="row bgnav">
+        <div class="row bgnav g-0">
             <div class="col-12 text-center">
                 <h1>Methflix <i class="fa-solid fa-pills"></i></h1>
                 <h5>Plane sur ta soirée</h5>
             </div>
         </div>
-        <div class="row bgnav mb-3 sticky-top">
+        <div class="row bgnav mb-3 sticky-top g-0">
             <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

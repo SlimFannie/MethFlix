@@ -26,7 +26,8 @@
                         </div>
                         <div class="form-group">
                             <label for="anneeFilm" class="textbleu">Année de parution initiale :</label>
-                            <input type="number" min="1895" max="2023" step="1" class="form-control" id="anneeFilm" name="annee" value="{{ old('annee', $film->annee) }}">
+                            <input type="number" min="1895
+                            " max="2023" step="1" class="form-control" id="anneeFilm" name="annee" value="{{ old('annee', $film->annee) }}">
                         </div>
                         <div class="form-group">
                             <label for="paysFilm" class="textbleu">Pays de production :</label>

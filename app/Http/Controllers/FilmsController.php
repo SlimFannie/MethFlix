@@ -85,7 +85,7 @@ class FilmsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(FilmRequest $request, $id)
+    public function update(Request $request, $id)
     {
         try {
             $film = Film::findOrFail($id);
@@ -116,6 +116,18 @@ class FilmsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $film = Film::findOrFail($id);
+
+            $film->delete();
+
+            return redirect()->route('films.index')->with('message', "Suppression de " . $film->nom . " réussi!");
+        }
+        catch(\Throwable $e) {
+            Log::debug($e);
+            return redirect()->route('films.index')->withErrors(['la suppression n\'a pas fonctionné']);
+        }
+
+        return redirect()->route('films.index');
     }
 }

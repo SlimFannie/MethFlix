@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FilmsController;
+use App\Http\Controllers\ActeursController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,28 @@ Route::get('/films/{id}/modifier/',
 Route::get('/films/{film}/',
     [FilmsController::class, 'show'])->name('films.show');
 
+Route::delete('/films/{id}',
+    [FilmsController::class, 'destroy'])->name('films.destroy');
+
 //Acteurs
 Route::get('acteurs', 
     [ActeursController::class, 'index'])->name('acteurs.index');
+
+    Route::get('/acteurs/nouveau',
+    [ActeursController::class, 'create'])->name('acteurs.create');
+    
+    Route::POST('/acteurs', 
+    [ActeursController::class, 'store'])->name('acteurs.store');
+
+Route::get('/acteur/{id}/modifier/',
+    [ActeursController::class, 'edit'])->name('acteurs.edit');
+
+    Route::patch('/acteurs/{id}/modifier',
+    [ActeursController::class, 'update'])->name('acteurs.update');
+
+Route::get('/acteurs/{acteur}/',
+    [ActeursController::class, 'show'])->name('acteurs.show');
+
+Route::delete('/acteurs/{id}',
+    [ActeursController::class, 'destroy'])->name('acteurs.destroy');
+

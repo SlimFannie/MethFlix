@@ -9,6 +9,8 @@ class Acteur extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['nom', 'prenom', 'img'];
+
     public function films() : HasMany {
         return $this->hasMany('App\Film');
     }

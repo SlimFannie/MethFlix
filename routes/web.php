@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 //Films
-Route::get('/films', 
+Route::get('/films/cacapepeppopo', 
     [FilmsController::class, 'index'])->name('films.index');
 
 Route::get('/films/nouveau',
